@@ -27,12 +27,12 @@ def file_hash(afile):
 
 def build_file_hash_dict(file_name):
     key = file_hash(file_name)
-    print "Hash " + key + ":" +file_name
+#    print "Hash " + key + ":" +file_name
     return {key : file_name}
 
 def build_file_size_dict(file_name):
     key = os.path.getsize(file_name)
-    print "Size " + str(key) + ":" +file_name
+#    print "Size " + str(key) + ":" +file_name
     return {key : file_name}
 
 #dict, list process function, file_list
@@ -42,7 +42,7 @@ def build_dict(adict, build_dic, file_list):
     dict_list = pool.map(build_dic, file_list)
     pool.close()
     pool.join()
-    print str(len(file_list)) + " files"
+#    print str(len(file_list)) + " files"
     for i in dict_list:
         assert(len(i.keys()) ==1 )
         key = i.keys()[0]
