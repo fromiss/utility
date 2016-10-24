@@ -1,2 +1,2 @@
 # utility
-python find_same_file.py folder_name
+python duplicate_file.py folder_name
